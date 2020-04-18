@@ -46,8 +46,8 @@ Time Elapsed 00:02:25.36
 - You may notice, it _takes time_ to build because it generates the webm file with subtitles from the mp4 file in the post-build event.
 - `subtitle.ass` file in the project contains the subtitles which are applied at various frame intervals.
 - Original mp4 video does not contain the subtitles. Only the generated webm video contains subtitles.
-- Project has `Video.html` file loads the generated WebM file in the HTML [Video](https://www.w3schools.com/html/html5_video.asp) Tag.
-- The `MainWindow.xaml` file loads the Html file into the CefSharp browser window.
+- `Video.html` file loads the generated WebM video file into the HTML [Video](https://www.w3schools.com/html/html5_video.asp) Tag.
+- `MainWindow.xaml` file loads the Html file into the CefSharp browser window.
 - __Output__ is in `bin/debug` folder. You will see the generated video named `MySpaceVideo.webm` alongwith the project's output exe file. 
 You can also double-click the `CefSharp_Video_Sample.exe` file and run it from there directly.
 

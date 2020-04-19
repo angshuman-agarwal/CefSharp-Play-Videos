@@ -33,17 +33,7 @@ After doing it manually, I found this handy tool - http://www.aegisub.org/downlo
 - It generates the WebM format video on the fly. In the __post-build event__, I generate the WebM video from the sample mp4 video in the project
      -  `$(ProjectDir)ffmpeg\ffmpeg.exe -y -i $(ProjectDir)mp4\MySpaceVideo.mp4  -vf  subtitles=subtitle.ass  $(TargetDir)MySpaceVideo.webm`
      -  This also enables you to embed this logic into your build pipeline.
-- Once the build completes successfully, you should see such message in the Output window -
-```     
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:02:25.36
-========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
-```
-
-- You may notice, it _takes time_ to build because it generates the webm file with subtitles from the mp4 file in the post-build event.
+- You may notice, build _takes time_ to build because it generates the webm file with subtitles from the mp4 file in the post-build event using FFmpeg.exe
 - `subtitle.ass` file in the project contains the subtitles which are applied at various frame intervals.
 - Original mp4 video does not contain the subtitles. Only the generated webm video contains subtitles.
 - `Video.html` file loads the generated WebM video file into the HTML [Video](https://www.w3schools.com/html/html5_video.asp) Tag.

@@ -30,7 +30,7 @@ _OR_
 
 After doing it manually, I found this handy tool - http://www.aegisub.org/downloads/, which allows you to modify / generate `.ass` file quite easily. Just play around, it's quite simple to use.
 
-## Project overview
+## Code overview
 - Just download the project and build it using Visual Studio Editor. You may be required to [Restore the NuGet Packages](https://docs.microsoft.com/en-us/nuget/consume-packages/package-restore#restore-packages-automatically-using-visual-studio). I used VS2019 and v[79.1.36](https://github.com/cefsharp/CefSharp/releases/tag/v79.1.360) of CefSharp
 - It generates the WebM format video on the fly. In the __post-build event__, I generate the WebM video from the sample mp4 video in the project
      -  `$(ProjectDir)ffmpeg\ffmpeg.exe -y -i $(ProjectDir)mp4\MySpaceVideo.mp4  -vf  subtitles=subtitle.ass  $(TargetDir)MySpaceVideo.webm`

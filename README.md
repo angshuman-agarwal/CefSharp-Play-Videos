@@ -19,7 +19,7 @@ Refer the documentation here - https://trac.ffmpeg.org/wiki/Encode/VP9
 
 Simply feed in a subtitle file of the format `.ass` - [Advanced Substation Alpha](https://www.matroska.org/technical/specs/subtitles/ssa.html) to ffmpeg on the command line.
 
-__NB:__ Following command will convert to webm and also add subtitles as well.
+__NB:__ Following command will convert to webm and add the subtitles as well.
 
 ```ffmpeg -y -i myMp4Video.mp4 -vf subtitles=mySubtitlefile.ass outputvideo.webm```
 
